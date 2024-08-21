@@ -17,7 +17,7 @@ function SignUp() {
           ...formdata,
         }).then((res)=>{
             alert("register successfully!")
-            window.location.href="/login"
+          
     })
       }
 //    console.log(formdata);

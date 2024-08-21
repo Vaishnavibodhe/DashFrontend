@@ -22,9 +22,10 @@ const Login = () => {
         // Save to localStorage
         localStorage.setItem('token', token);
 
-        alert("Login successful!");
+       
+       
         // Optionally redirect after login
-        window.location.href = "/dash";
+        
       })
       .catch((err) => {
         alert("Login failed");

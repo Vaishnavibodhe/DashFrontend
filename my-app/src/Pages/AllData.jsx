@@ -42,7 +42,7 @@ const AllData = () => {
         .then((res) => {
             alert("Employee data delete successfully!");
             console.log(res);
-            window.location.href="/all";
+            
         })
         .catch((err) => {
             console.error("Error deleting form", err);
