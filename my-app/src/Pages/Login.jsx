@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Stack, Input, InputGroup, InputRightElement, Button, HStack, Box, Heading, FormLabel } from "@chakra-ui/react";
 import axios from "axios";
+import {useNavigate} from "react-router-dom"
 
 
 const Login = () => {
@@ -8,7 +9,8 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [show, setShow] = React.useState(false);
   const handleClick = () => setShow(!show);
-
+  const navigate=useNavigate();
+   
   const handleLogin = () => {
     const payload = {
       email: email,
@@ -21,7 +23,7 @@ const Login = () => {
         const { token } = res.data;
         // Save to localStorage
         localStorage.setItem('token', token);
-
+         navigate("/dash")
        
        
         // Optionally redirect after login
