@@ -24,7 +24,7 @@ function SignUp() {
 
     return (
         <div >
-            <Heading>Create account</Heading>
+            <Heading ml={64} mb={10}>Create account</Heading>
             <HStack justifyContent="space-evenly" marginTop="30px" marginBottom="50px">
                 <Box width='80%' height="auto" marginLeft="200px">
                     <form onSubmit={handleSubmit}>

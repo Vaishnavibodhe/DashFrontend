@@ -51,9 +51,13 @@ const AllData = () => {
 }
 
   return (
-    <Box width='100%' overflowX='auto' p={4}>
-      <Heading mb={4}>Employee Table</Heading>
+    <Box width='100%' overflowX='between' ml-34 p={4}>
+      <Heading ml-20 mb={4}>Employee Table</Heading>
+      <Button   as={Link} to={"/dash"} size='sm' ml={1100} colorScheme='teal'>
+                   Add New Employee
+                </Button>
       <Table variant='simple'>
+       
         <Thead>
           <Tr>
             <Th>Sr. No.</Th>

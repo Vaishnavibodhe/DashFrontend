@@ -5,10 +5,14 @@ import DashBoard from "../Pages/DashBoard";
 import UpdateDash from "../Pages/UpdateDash";
 import AllData from "../Pages/AllData";
 
+import Home from "../Pages/Home";
+
+
 function AllRoutes(){
   return (
     <Routes>
-        <Route path="/" element={<SignUp/>}></Route>
+       <Route path="/" element={<Home/>}></Route>
+        <Route path="/signup" element={<SignUp/>}></Route>
         <Route path="/dash" element={<DashBoard/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/all" element={<AllData/>}></Route>

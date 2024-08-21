@@ -4,7 +4,7 @@ import { Link as RouterLink } from 'react-router-dom';
 
 function Navbar() {
     return (
-        <Flex as='nav' p={4} bg='teal.500' color='white' alignItems='center'>
+        <Flex as='nav' shadow-b-xl p={4} bg='teal.500' color='white' alignItems='center'>
             <Heading size='md'>Employee App</Heading>
             <Spacer />
             <Box>
