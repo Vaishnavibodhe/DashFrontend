@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Stack, Input, Button, FormLabel, Select, Box, Heading } from '@chakra-ui/react';
 import axios from 'axios';
+import {useNavigate} from "react-router-dom"
 
 function DashBoard() {
     const [formdata, setFormData] = useState({
@@ -10,6 +11,7 @@ function DashBoard() {
         department: "",
         salary: 0,
     });
+    const navigate=useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -28,7 +30,7 @@ function DashBoard() {
         .then((res) => {
             alert("Employee data submitted successfully!");
             console.log(res);
-            window.location.href="/all"
+            navigate("/all")
             // Handle success (e.g., redirect or clear form)
         })
         .catch((err) => {

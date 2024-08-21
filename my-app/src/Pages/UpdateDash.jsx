@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Stack, Input, Button, FormLabel, Select, Box, Heading, Flex } from '@chakra-ui/react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import {useNavigate} from "react-router-dom"
+
 
 function UpdateDash() {
     const [formdata, setFormData] = useState({
@@ -11,6 +13,7 @@ function UpdateDash() {
         department: "",
         salary: 0,
     });
+    const navigate=useNavigate();
 
     const { _id } = useParams(); 
 
@@ -55,6 +58,7 @@ function UpdateDash() {
             .then((res) => {
                 alert("Employee data updated successfully!");
                 console.log(res);
+              navigate("/all")
             })
             .catch((err) => {
                 console.error("Error submitting form", err);
